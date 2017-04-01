@@ -1,0 +1,47 @@
+<!doctype html>
+<html ng-app ="HMS">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/GetSensorsService.js"></script>
+  <script src="js/ControlService.js"></script>
+  <script src="index.js"></script>
+</head>
+
+<body ng-controller="HMSController">
+
+  <div id="Sensors">
+      <h1><b>Sensor Status</b></h1>
+      <h2>Update in {{SecondsToUpdate}} seconds</h2>
+      <h3>Distance: {{SensorsTemperature}} cm</h3>
+      <h3>Is the room empty?: {{SensorsPIR}}</h3>
+      <h3>Lights: {{ControlLights}}</h3>
+      <h3>DoorLock: {{ControlDoorLock}}</h3>
+      <h3>Windows: {{ControlWindows}}</h3>
+  </div>
+
+  <div id="Controls">
+      <form id="HMSControl">
+          <h1>Home Components</h1>
+          <h3>Lights</h3>
+          <select ng-model="Lights">
+              <option value="1">ON</option>
+              <option value="0">OFF</option>
+          </select>
+          <h3>DoorLock</h3>
+          <select ng-model="DoorLock">
+              <option value="1">Opened</option>
+              <option value="0">Closed</option>
+          </select>
+          <h3>Windows</h3>
+          <select ng-model="Windows">
+              <option value="1">Opened</option>
+              <option value="0">Closed</option>
+          </select>
+          <input type="button" value="Submit" ng-click="DO()">
+      </form>
+  </div>
+</body>
+</html>

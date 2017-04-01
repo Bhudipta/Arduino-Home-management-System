@@ -1,0 +1,22 @@
+{
+  "name": "Home Management System",
+  "version": "Alpha",
+  "description": "Basic Home Automation",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "0.12.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heroku/node-js-getting-started"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "Copyright": "Hellious"
+}
